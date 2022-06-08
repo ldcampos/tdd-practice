@@ -10,7 +10,8 @@ fun numberNames (n : Int): String {
     return if (ten == 0) {
         units[unit]
     }
-    else {
+    else if (ten == 1){
         tens[unit]
     }
+    else "twenty"
 }
