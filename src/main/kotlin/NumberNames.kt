@@ -7,11 +7,13 @@ fun numberNames (n : Int): String {
     val unit = n % 10     // units digit
     val ten = n / 10      // tens digit
 
-    return if (ten == 0) {
-        units[unit]
+    return when (ten) {
+        0 -> {
+            units[unit]
+        }
+        1 -> {
+            tens[unit]
+        }
+        else -> "twenty"
     }
-    else if (ten == 1){
-        tens[unit]
-    }
-    else "twenty"
 }
