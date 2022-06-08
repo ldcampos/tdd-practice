@@ -16,7 +16,7 @@ fun numberNames (n : Int): String {
         }
         2 -> {
             if (unit == 0) "twenty"
-            else "twenty " + units[unit]
+            else "twenty ${units[unit]}"
         }
         else -> ""
     }
