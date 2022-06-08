@@ -18,6 +18,6 @@ fun numberNames (n : Int): String {
             if (unit == 0) "twenty"
             else "twenty ${units[unit]}"
         }
-        else -> ""
+        else -> "thirty"
     }
 }
