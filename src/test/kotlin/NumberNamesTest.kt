@@ -10,4 +10,8 @@ class NumberNamesTest {
     fun `testa 2`() {
         assertEquals("two", numberNames(2))
     }
+    @Test
+    fun `testa 3`() {
+        assertEquals("three", numberNames(3))
+    }
 }
