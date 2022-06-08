@@ -1,8 +1,10 @@
 fun numberNames (n : Int): String {
     val units = arrayOf("zero", "one", "two", "three",
         "four", "five", "six", "seven", "eight", "nine")
-    val tens = arrayOf("ten", "eleven", "twelve", "thirteen", "fourteen",
+    val teens = arrayOf("ten", "eleven", "twelve", "thirteen", "fourteen",
         "fifhteen", "seventeen", "eighteen", "nineteen")
+    val tens = arrayOf("zero", "ten", "twenty", "thirty", "forty", "fifhty",
+        "sixty", "seventy", "eighty", "ninety")
 
     val unit = n % 10     // units digit
     val ten = n / 10      // tens digit
@@ -12,12 +14,13 @@ fun numberNames (n : Int): String {
             units[unit]
         }
         1 -> {
-            tens[unit]
+            teens[unit]
         }
-        2 -> {
-            if (unit == 0) "twenty"
-            else "twenty ${units[unit]}"
+        else -> {
+            val tensName = tens[ten]
+
+            if (unit>0) "$tensName ${units[unit]}"
+            else tensName
         }
-        else -> "thirty"
     }
 }
