@@ -14,6 +14,10 @@ fun numberNames (n : Int): String {
         1 -> {
             tens[unit]
         }
-        else -> "twenty"
+        2 -> {
+            if (unit == 0) "twenty"
+            else "twenty " + units[unit]
+        }
+        else -> ""
     }
 }
