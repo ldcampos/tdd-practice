@@ -1,3 +1,4 @@
 fun numberNames (n : Int): String {
-    return "one"
+    return if (n == 1) "one"
+    else "two"
 }
