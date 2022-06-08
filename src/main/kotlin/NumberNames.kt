@@ -1,8 +1,5 @@
 fun numberNames (n : Int): String {
-    return when (n) {
-        1 -> "one"
-        2 -> "two"
-        3 -> "three"
-        else -> "four"
-    }
+    val numbers = arrayOf("zero", "one", "two", "three",
+        "four", "five", "six", "seven", "eight", "nine")
+    return numbers[n]
 }
