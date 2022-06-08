@@ -1,5 +1,7 @@
 fun numberNames (n : Int): String {
-    return if (n == 1) "one"
-    else if (n == 2) "two"
-    else "three"
+    return when (n) {
+        1 -> "one"
+        2 -> "two"
+        else -> "three"
+    }
 }

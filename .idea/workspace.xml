@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83bb9536-9be6-47fa-b527-3685a26ebefd" name="Changes" comment="red: create unity test `testa 3`">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="83bb9536-9be6-47fa-b527-3685a26ebefd" name="Changes" comment="green: makes numberNames pass previous test">
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/NumberNames.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/NumberNames.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -163,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654650422690</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="green: makes numberNames pass previous test">
+      <created>1654650641564</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1654650641564</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -196,6 +202,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="red: create unity test `testa 3`" />
-    <option name="LAST_COMMIT_MESSAGE" value="red: create unity test `testa 3`" />
+    <MESSAGE value="green: makes numberNames pass previous test" />
+    <option name="LAST_COMMIT_MESSAGE" value="green: makes numberNames pass previous test" />
   </component>
 </project>
