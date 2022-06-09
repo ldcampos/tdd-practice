@@ -15,7 +15,9 @@ fun numberNames(n: Int): String {
     val unit = n % 10     // units digit
     val ten = n / 10      // tens digit
 
-    return if (unit == 0)               // round tens
+    return if (n/100 == 1)
+        "one hundred"
+    else if (unit == 0)               // round tens
         tens[ten]
     else if (ten == 0)                  // units
         units[unit]
