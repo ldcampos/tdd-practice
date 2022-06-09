@@ -12,12 +12,13 @@ fun numberNames(n: Int): String {
         "sixty", "seventy", "eighty", "ninety"
     )
 
-    val unit = n % 10     // units digit
-    val ten = n / 10      // tens digit
+    val unit = n % 10         // units digit
+    val ten = n / 10          // tens digit
+    val hundred = n / 100     // hundred digit
 
-    return if (n/100 == 1)
+    return if (hundred == 1)            // one hundred
         "one hundred"
-    else if (unit == 0)               // round tens
+    else if (unit == 0)                 // round tens
         tens[ten]
     else if (ten == 0)                  // units
         units[unit]
