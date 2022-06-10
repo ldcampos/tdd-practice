@@ -54,4 +54,8 @@ class NumberNamesTest {
     fun `testa 200`() {
         assertEquals("two hundred", numberNames(200))
     }
+    @Test
+    fun `testa 101`() {
+        assertEquals("one hundred and one", numberNames(101))
+    }
 }
