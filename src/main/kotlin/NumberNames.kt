@@ -27,5 +27,6 @@ fun numberNames(n: Int): String {
     else                                             // n >= 100
         units[hundred] + " hundred" +
                 if (unit > 0) " and ${units[unit]}"
+                else if (ten%10 > 0) " and ${tens[ten%10]}"
                 else ""
 }
