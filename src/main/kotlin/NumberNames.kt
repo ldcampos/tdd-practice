@@ -1,13 +1,13 @@
 fun numberNames(n: Int): String {
-    val units = arrayOf(
+    val units = listOf(
         "zero", "one", "two", "three", "four",
         "five", "six", "seven", "eight", "nine"
     )
-    val teens = arrayOf(
+    val teens = listOf(
         "ten", "eleven", "twelve", "thirteen", "fourteen",
         "fifhteen", "seventeen", "eighteen", "nineteen"
     )
-    val tens = arrayOf(
+    val tens = listOf(
         "zero", "ten", "twenty", "thirty", "forty",
         "fifhty", "sixty", "seventy", "eighty", "ninety"
     )
