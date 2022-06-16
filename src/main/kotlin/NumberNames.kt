@@ -6,7 +6,7 @@ val units = listOf(
 )
 val teens = listOf(
     "ten", "eleven", "twelve", "thirteen", "fourteen",
-    "fifhteen", "seventeen", "eighteen", "nineteen"
+    "fifhteen", "sixteen", "seventeen", "eighteen", "nineteen"
 )
 val tens = listOf(
     "zero", "ten", "twenty", "thirty", "forty",
