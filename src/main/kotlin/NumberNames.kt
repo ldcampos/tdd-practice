@@ -1,35 +1,49 @@
+/* list of 'atomic' names */
+
+val units = listOf(
+    "zero", "one", "two", "three", "four",
+    "five", "six", "seven", "eight", "nine"
+)
+val teens = listOf(
+    "ten", "eleven", "twelve", "thirteen", "fourteen",
+    "fifhteen", "seventeen", "eighteen", "nineteen"
+)
+val tens = listOf(
+    "zero", "ten", "twenty", "thirty", "forty",
+    "fifhty", "sixty", "seventy", "eighty", "ninety"
+)
+
+fun nameUnits(n : Int) : String {
+    val unitsDigit = n % 10
+    val tensDigit = (n % 100) / 10
+
+    return if ((unitsDigit != 0 || n == 0) && tensDigit != 1)
+        units[unitsDigit]
+    else ""
+}
+fun nameTens(n : Int) : String {
+    val unitsDigit = n % 10
+
+    return when (val tensDigit = (n % 100) / 10) {
+        0 -> ""
+        1 -> teens[unitsDigit]
+        else -> {
+            tens[tensDigit] +
+            if (unitsDigit != 0) " "
+            else ""
+        }
+    }
+}
+
+fun nameHundreds(n : Int) : String {
+    val hundredsDigit = n / 100
+
+    return if (hundredsDigit == 0) ""
+    else
+        units[hundredsDigit] + " hundred" +
+            (if (n % 100 != 0) " and " else "")
+}
+
 fun numberNames(n: Int): String {
-    val units = listOf(
-        "zero", "one", "two", "three", "four",
-        "five", "six", "seven", "eight", "nine"
-    )
-    val teens = listOf(
-        "ten", "eleven", "twelve", "thirteen", "fourteen",
-        "fifhteen", "seventeen", "eighteen", "nineteen"
-    )
-    val tens = listOf(
-        "zero", "ten", "twenty", "thirty", "forty",
-        "fifhty", "sixty", "seventy", "eighty", "ninety"
-    )
-
-    val unit = n % 10         // units digit
-    val ten = n / 10          // tens digit
-    val hundred = n / 100     // hundred digit
-
-    return if (ten == 0)                             // n < 10
-        units[unit]
-    else if (ten == 1)                               // 10 < n <= 19
-        teens[unit]
-    else if (ten <= 9)                               // 20 <= n < 100
-        tens[ten] +
-                if (unit > 0) " ${units[unit]}"
-                else ""
-    else                                             // n >= 100
-        units[hundred] + " hundred" +
-                if (unit > 0)
-                    if (ten%10 == 0) " and ${units[unit]}"
-                    else if (ten%10 == 1) " and ${teens[unit]}"
-                    else " and ${tens[ten%10]} ${units[unit]}"
-                else if (ten%10 > 0) " and ${tens[ten%10]}"
-                else ""
+    return nameHundreds(n) + nameTens(n) + nameUnits(n)
 }
